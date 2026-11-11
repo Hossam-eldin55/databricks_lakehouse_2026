@@ -29,6 +29,6 @@ INGESTION_CONFIG = [
 {
     "source": "erp",
     "path": f"{Base_path}/source_erp/PX_CAT_G1V2.csv",
-    "target": "PX_CAT_G1V2"
+    "target": "erp_PX_CAT_G1V2"
 }
 ]
