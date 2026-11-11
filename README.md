@@ -22,9 +22,9 @@ This project rebuilds a classic sales data warehouse as a **Databricks Lakehouse
 - All tables stored in **Delta format** under Unity Catalog.
 
 ---
-
+ 
 ## 🏗️ Architecture
-
+ 
 ```mermaid
 flowchart LR
     subgraph Sources
@@ -37,13 +37,13 @@ flowchart LR
     D --> E[🥇 Gold<br/>Star schema]
     E --> F[Analytics / BI]
 ```
-
+ 
 | Layer | Schema | Purpose | Transformations |
 |-------|--------|---------|-----------------|
 | 🥉 **Bronze** | `workspace.bronze` | Raw data as received | None (schema inferred, full overwrite) |
 | 🥈 **Silver** | `workspace.silver` | Clean, consistent data | Trimming, normalization, type casting, validation, renaming |
 | 🥇 **Gold** | `workspace.gold` | Business-ready model | Joins, surrogate keys, integration of CRM + ERP |
-
+ 
 ---
 
 ## 🛠️ Tech Stack
